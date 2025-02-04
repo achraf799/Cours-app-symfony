@@ -1,0 +1,18 @@
+version: '3'
+services:
+  php-fpm:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        GOODUSER: achraf
+        UID: 1002
+        MAIL: mohammed-achraf.boudiaf@etu.univ-orleans.fr
+        NOM: "BOUDAIF Achraf"
+    container_name: tp1php
+    volumes:
+    - ./dev:/var/www/html
+    ports:
+    - "5001:8000"
+    environment:
+      PHP_IDE_CONFIG: serverName=toto

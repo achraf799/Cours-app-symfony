@@ -1,0 +1,33 @@
+Version pour ubuntu !
+
+Il faut modifier les lignes suivantes dans docker-compose.yml.
+Attention !!! GOODUSER est votre nom d'utilisateur.
+On obtient cette information en exécutant la commande "id".
+
+args:
+  GOODUSER: jean-michel.couvreur
+  UID: 11688
+  MAIL: jean-michel.couvreur@univ-orleans.fr
+  NOM: "Jean-Michel Couvreur"
+
+Dans cette version (voir docker-compose.yml),
+j'ai appelé le container : my-good-container
+
+L'utilisation est toujours
+  docker-compose build
+  docker-compose up -d
+  docker exec -ti tp1php bash
+    cd projet
+  symfony server:start --no-tls --listen-ip=0.0.0.0 --d
+q6:symfony console make:controller pages
+q9:Question 9 Créer l’entité Cours: symfony console doctrine:database:create
+                                    symfony console make:entity Cours
+q10:Question 10 Créer la base de donnée et la table associée à l’entit:
+        symfony console make:migration
+        symfony console doctrine:migrations:migrate
+q11:Question 11 Créer une fixture:
+        1) Installer la package fixture : symfony composer require orm-fixtures --dev
+        (2) Créer une fixture : symfony console make:fixture
+         code + symfony console doctrine:fixtures:load
+q12: charger les donnees dans la table : symfony console doctrine:fixtures:load
+q16 : symfony console make:crud Cours
