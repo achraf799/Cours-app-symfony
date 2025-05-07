@@ -1,8 +1,23 @@
-Version pour ubuntu !
+# Symfony Course Manager (Dockerized)
 
-Il faut modifier les lignes suivantes dans docker-compose.yml.
-Attention !!! GOODUSER est votre nom d'utilisateur.
-On obtient cette information en exécutant la commande "id".
+This is a Symfony-based web application for managing a list of courses, built as part of a training or assignment. The project is containerized using Docker for easy setup.
+
+## 🧱 Features
+
+- Entity: `Cours` (Course)
+- CRUD interface for managing courses
+- Symfony ORM with Doctrine
+- Fixtures for seeding data
+- Docker-based development environment
+
+## ⚙️ Tech Stack
+
+- PHP 8.x
+- Symfony 6.x
+- Doctrine ORM
+- Docker + Docker Compose
+- SQLite or MySQL (optional)
+
 
 args:
   GOODUSER: jean-michel.couvreur
